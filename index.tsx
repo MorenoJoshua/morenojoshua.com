@@ -1,9 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import Avatar from 'avataaars';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
-import bgImage from './dunes_optimized.jpeg';
 import './style.scss';
 const colors = {
   main: '#F0E9D2',
@@ -20,13 +18,7 @@ const email = 'hello@morenojoshua.com';
 
 const App = () => {
   return (
-    <div
-      className="holder"
-      style={{
-        backgroundColor: colors.main,
-        backgroundImage: bgImage,
-      }}
-    >
+    <div className="holder">
       <div className="fcc fs bg">
         <div className="j-card">
           <Avatar
