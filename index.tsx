@@ -2,6 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import Avatar from 'avataaars';
 
+import GHIcon from './ghicon';
+
 import './style.scss';
 const colors = {
   main: '#F0E9D2',
