@@ -1,0 +1,63 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+$main: #f0e9d2;
+$secondary: #e6ddc4;
+$highlight: #678983;
+$dark: #181d31;
+
+.holder {
+  @extend .vw-100 !optional;
+  @extend .vh-100 !optional;
+  @extend .bg-dark !optional;
+}
+
+.fcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fs {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.j-card {
+  background-color: white !important;
+  border: 1px solid $secondary;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  $size: 180;
+  $around: 10;
+  padding: #{$around}px;
+  border-radius: #{((($size + $around + ($size * 0.08))) / 2)}px;
+
+  .avatar {
+    width: #{$size}px;
+    height: #{$size}px;
+    margin-top: -#{$size * 0.14}px;
+    margin-left: -#{$size * 0.06}px;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 14px;
+    margin-right: #{$size * 0.24}px;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    .name {
+      font-size: xx-large;
+    }
+    .other {
+      font-size: large;
+    }
+  }
+}
