@@ -3,10 +3,20 @@ $secondary: #e6ddc4;
 $highlight: #678983;
 $dark: #181d31;
 
+$screen-sm-min: 540px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-lg-min: 1200px;
+$screen-md-max: ($screen-lg-min - 1);
+
+body {
+  overflow: hidden;
+}
+
 .holder {
   @extend .vw-100 !optional;
   @extend .vh-100 !optional;
-  background-image: 'https://raw.githubusercontent.com/MorenoJoshua/morenojoshua.com/master/dunes_optimized.jpeg';
 }
 
 .fcc {
@@ -26,7 +36,10 @@ $dark: #181d31;
 }
 
 .bg {
-  background-color: #f2af63;
+  background-color: #d9ab73;
+  background-image: url('https://raw.githubusercontent.com/MorenoJoshua/morenojoshua.com/master/dunes_optimized.jpeg');
+  background-position: 0% 0%;
+  background-size: cover;
 }
 
 .j-card {
@@ -42,16 +55,20 @@ $dark: #181d31;
   padding: #{$around}px;
   border-radius: #{((($size + $around + ($size * 0.08))) / 2)}px;
 
+  filter: drop-shadow(1px 2px 8px hsl(33deg 47% 22%));
   .avatar {
     width: #{$size}px;
     height: #{$size}px;
     margin-top: -#{$size * 0.14}px;
     margin-left: -#{$size * 0.06}px;
+    [fill='#EDB98A'] {
+      fill: #ffdbac;
+    }
   }
   .text {
     display: flex;
     flex-direction: column;
-    margin-left: 14px;
+    margin-left: 6px;
     margin-right: #{$size * 0.24}px;
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -61,5 +78,49 @@ $dark: #181d31;
     .other {
       font-size: large;
     }
+    a {
+      $color: #4a6d8c;
+      text-decoration: none;
+      color: darken($color, 10);
+      will-change: auto;
+      filter: drop-shadow(0 0px 0px hsl(0 0 100%));
+      transition: 200ms linear;
+      &:hover {
+        text-decoration: underline;
+        // transform: translateY(-1px);
+        filter: drop-shadow(0 1px 3px hsl(0 0 95%));
+        color: $color;
+      }
+    }
   }
+}
+
+@media (max-width: $screen-xs-max) {
+  .j-card {
+    $size: 120;
+    .avatar {
+      width: #{$size}px !important;
+      height: #{$size}px;
+      margin-top: -#{$size * 0.14}px;
+      margin-left: -#{$size * 0.06}px;
+    }
+    .text {
+      .name {
+        font-size: larger;
+      }
+      .other {
+        font-size: small;
+      }
+    }
+  }
+}
+@media (min-width: $screen-sm-min) {
+}
+@media (max-width: $screen-sm-max) {
+}
+@media (min-width: $screen-md-min) {
+}
+@media (max-width: $screen-md-max) {
+}
+@media (min-width: $screen-lg-min) {
 }

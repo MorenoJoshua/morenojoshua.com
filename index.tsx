@@ -38,9 +38,15 @@ const App = () => {
           />
           <div className="text">
             <div className="name">{name}</div>
-            <div className="other">{position}</div>
-            <div className="other">{phone}</div>
-            <div className="other">{email}</div>
+            <a className="other" href="https://github.com/morenojoshua">
+              {position}
+            </a>
+            <a className="other" href="tel:+526643557882">
+              {phone}
+            </a>
+            <a className="other" href="mailto:hello@morenojoshua.com">
+              {email}
+            </a>
           </div>
         </div>
       </div>
