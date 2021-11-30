@@ -25,7 +25,7 @@ const App = () => {
         backgroundColor: colors.main,
       }}
     >
-      <div className="fcc fs">
+      <div className="fcc fs bg">
         <div className="j-card">
           <Avatar
             className="avatar"
