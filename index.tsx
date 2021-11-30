@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import Avatar from 'avataaars';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
+import bgImage from './dunes_optimized.jpeg';
 import './style.scss';
 const colors = {
   main: '#F0E9D2',
@@ -23,6 +24,7 @@ const App = () => {
       className="holder"
       style={{
         backgroundColor: colors.main,
+        backgroundImage: bgImage,
       }}
     >
       <div className="fcc fs bg">
